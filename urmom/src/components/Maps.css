@@ -1,0 +1,158 @@
+/* Maps.css */
+
+/* Container for both the map and info sections */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Map Section */
+.map-section {
+  width: 60%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.map-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.map-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Information Section */
+.info-section {
+  width: 40%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Space buttons evenly */
+  margin-bottom: 20px; /* Add margin below buttons */
+}
+
+.toggle-draw-tools, .enter-button {
+  background: linear-gradient(to right, #34d399, #2dd4bf);
+  height: 48px;
+  width: 45%;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle-draw-tools:hover, .enter-button:hover {
+  background: linear-gradient(to right, #2dd4bf, #34d399);
+}
+
+.selection-region {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 200px; /* Set a maximum height for the selection region */
+  padding: 10px; /* Add padding for better spacing */
+  border: 1px solid #d1d5db; /* Optional: add border for better visibility */
+  border-radius: 8px; /* Optional: rounding corners */
+  background-color: #f9f9f9; /* Optional: background color */
+}
+
+.text-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+.point-container {
+  background-color: #86efac; /* Light green color */
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.point-container .text-label {
+  font-weight: bold;
+}
+
+.text-box {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 8px;
+  width: 60%; /* Adjust width */
+  text-align: center;
+}
+
+.weather-info {
+  margin-top: 20px;
+}
+
+.weather-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Space between weather items */
+}
+
+.weather-item {
+  background-color: #e5f6e0; /* Light green for weather info */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allow weather items to grow and shrink */
+}
+
+.weather-item .text-label {
+  font-weight: bold;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .map-section, .info-section {
+    width: 100%; /* Full width on smaller screens */
+    margin-left: 0; /* Remove margin on smaller screens */
+  }
+
+  .button-container {
+    flex-direction: column; /* Stack buttons on top of each other */
+  }
+
+  .toggle-draw-tools, .enter-button {
+    width: 100%; /* Full width for buttons */
+    margin-bottom: 10px; /* Space between buttons */
+  }
+}
